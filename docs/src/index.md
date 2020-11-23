@@ -8,5 +8,5 @@ CurrentModule = GLExperiments
 ```
 
 ```@autodocs
-Modules = [GLExperiments]
+Modules = [GLExperiments, GLExperiments.FirstWindow]
 ```

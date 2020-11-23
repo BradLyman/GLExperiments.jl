@@ -3,6 +3,10 @@ uuid = "a5ea3b45-9ee4-4d66-91f0-2b9f9b58f478"
 authors = ["Bradley Lyman <lyman.brad3211@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+GLFW = "f7f18e0c-5ee9-5ccd-a5bf-e8befd85ed98"
+ModernGL = "66fc600b-dfda-50eb-8b99-91cfa97b1301"
+
 [compat]
 julia = "1"
 
