@@ -28,6 +28,7 @@ jobs:
       - uses: actions/cache@v1
         env:
           cache-name: cache-artifacts
+          DISPLAY: 0
         with:
           path: ~/.julia/artifacts
           key: ${{ runner.os }}-test-${{ env.cache-name }}-${{ hashFiles('**/Project.toml') }}
@@ -50,11 +51,15 @@ jobs:
             using Pkg
             Pkg.develop(PackageSpec(path=pwd()))
             Pkg.instantiate()'
+        env:
+          DISPLAY: 0
       - run: |
           julia --project=docs -e '
             using Documenter: doctest
             using GLExperiments
             doctest(GLExperiments)'
+        env:
+          DISPLAY: 0
       - run: julia --project=docs docs/make.jl
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
