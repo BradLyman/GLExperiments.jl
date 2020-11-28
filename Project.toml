@@ -9,6 +9,7 @@ ModernGL = "66fc600b-dfda-50eb-8b99-91cfa97b1301"
 
 [compat]
 ModernGL = "1.1"
+GLFW = "3.4"
 julia = "1"
 
 [extras]
